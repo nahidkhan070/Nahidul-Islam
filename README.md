@@ -3,8 +3,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width,initial-scale=1" />
     <title>Nahidul Islam — MIS Executive & Data Analyst</title>
-    <!-- Importing Poppins for Body Text & Playfair Display for Headings -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+    
+
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
     
     <style>
         /* --- 1. PREMIUM COLOR PALETTE & VARIABLES --- */
@@ -349,8 +350,9 @@
     </style>
 </head>
 <body>
-    <!-- Scroll Progress Indicator -->
-    <div class="progress-bar" id="progressBar"></div>
+    
+
+<div class="progress-bar" id="progressBar"></div>
 
     <div class="wrap">
         <header class="hero fade-in">
@@ -360,7 +362,7 @@
                     <div>
                         <h1>Nahidul Islam</h1>
                         <p class="job-title">MIS Executive — Labib Dyeing Mills Ltd</p>
-                        <p class="job-dates">Since May 15, 2023 • Abdullahpur, Dhaka</p>
+                        <p class="job-dates">Since May 2023 • Abdullahpur, Dhaka</p>
                     </div>
                     <nav class="nav">
                         <a href="#about">About</a>
@@ -392,12 +394,14 @@
 
         <main class="grid">
             <div>
-                <!-- About -->
-                <section id="about" class="card fade-in delay-1">
+                
+
+<section id="about" class="card fade-in delay-1">
                     <h2>About Me</h2>
                     <p>I am <strong>Nahidul Islam</strong>, a dedicated MIS Executive with expertise in data analysis, reporting automation, and process optimization.</p>
-                    <!-- Staggered Skills Container -->
-                    <div class="skills" id="skillsContainer">
+                    
+
+<div class="skills" id="skillsContainer">
                         <span class="chip">MS Excel (Advanced)</span>
                         <span class="chip">Power BI</span>
                         <span class="chip">SQL</span>
@@ -408,29 +412,48 @@
                     </div>
                 </section>
 
-                <!-- Experience -->
-                <section id="experience" class="card fade-in delay-2" style="margin-top:30px">
+                
+
+<section id="experience" class="card fade-in delay-2" style="margin-top:30px">
                     <h2>Professional History</h2>
+                    
+                    <!-- Role 1: MIS Executive (Current) -->
                     <div style="margin-top:16px; border-left: 3px solid var(--accent); padding-left: 15px;">
                         <h3 style="margin-bottom: 4px;">MIS Executive</h3>
-                        <p style="margin:0;font-size:14px; opacity: 0.8;">Labib Dyeing Mills Ltd • <em>May 2023 – Present</em></p>
+                        <p style="margin:0;font-size:14px; opacity: 0.8;">Labib Dyeing Mills Ltd • <em>2023 – Present</em></p>
                         <ul>
-                            <li>Analyze complex datasets and prepare management-ready MIS reports.</li>
-                            <li>Designed and maintain automated Power BI dashboards.</li>
-                            <li>Key focus on presenting actionable KPI reports to senior leadership.</li>
+                            <li>Analyzed complex datasets to provide actionable insights for strategic decision-making.</li>
+                            <li>Utilized advanced Excel functions, SQL, and data visualization tools to enhance operational efficiency.</li>
+                            <li>Developed and maintained comprehensive MIS reports, dashboards, and presentations for senior management.</li>
                         </ul>
                     </div>
+
+                    <!-- Role 2: Tele Sales Executive -->
                     <div style="margin-top:20px; border-left: 3px solid rgba(255,255,255,0.1); padding-left: 15px;">
                         <h3 style="margin-bottom: 4px;">Tele Sales Executive</h3>
                         <p style="margin:0;font-size:14px; opacity: 0.8;">bdCalling IT Ltd • <em>2022 – 2023</em></p>
                         <ul>
-                            <li>Generated leads and closed sales via phone, achieving 110% targets.</li>
+                            <li>Drove sales growth by generating leads, qualifying prospects, and closing sales over the phone.</li>
+                            <li>Conducted needs assessments and provided tailored solutions to meet client requirements.</li>
+                            <li>Achieved and exceeded sales targets while maintaining high customer satisfaction levels.</li>
+                        </ul>
+                    </div>
+                    
+                    <!-- Role 3: Computer Operator (Added from CV) -->
+                    <div style="margin-top:20px; border-left: 3px solid rgba(255,255,255,0.1); padding-left: 15px;">
+                        <h3 style="margin-bottom: 4px;">Computer Operator</h3>
+                        <p style="margin:0;font-size:14px; opacity: 0.8;">Goldenline Medical Center • <em>2020 – 2021</em></p>
+                        <ul>
+                            <li>Managed health information systems, ensuring accurate data entry and integrity of patient records.</li>
+                            <li>Operated software for scheduling, billing, and reporting under strict confidentiality standards.</li>
+                            <li>Collaborated effectively with healthcare professionals to support patient care and administrative processes.</li>
                         </ul>
                     </div>
                 </section>
 
-                <!-- Projects -->
-                <section id="projects" class="card fade-in delay-3" style="margin-top:30px">
+                
+
+<section id="projects" class="card fade-in delay-3" style="margin-top:30px">
                     <h2>Key Projects & Automations</h2>
                     <p style="font-size: 14px; opacity: 0.8; margin-bottom: 20px;">
                         Click **"✨ Generate Impact Analysis"** for an AI summary.
@@ -490,7 +513,14 @@
                 </div>
                 <div class="card fade-in delay-2" style="margin-top:30px">
                     <h2>Education</h2>
-                    <div style="margin-top: 10px;"><p style="margin-top: 0; margin-bottom: 2px;"><b>B.Sc (CSE)</b></p><p style="margin:0;font-size:14px; opacity: 0.8;">BSMRSTU (2016–2017)</p></div>
+                    <div style="margin-top: 10px;">
+                        <p style="margin-top: 0; margin-bottom: 2px;"><b>B.Sc (Bachelor of Science) in CSE</b></p>
+                        <p style="margin:0;font-size:14px; opacity: 0.8;">Bangabandhu Sheikh Mujibur Rahman Science and Technology University (2016–2017)</p>
+                    </div>
+                    <div style="margin-top: 15px;">
+                        <p style="margin-top: 0; margin-bottom: 2px;"><b>HSC in Science</b></p>
+                        <p style="margin:0;font-size:14px; opacity: 0.8;">Birshreshtha Noor Mohammad Public College, Dhaka (2016)</p>
+                    </div>
                 </div>
             </aside>
         </main>
