@@ -29,7 +29,7 @@
             background: var(--bg-gradient);
             background-size: 400% 400%;
             /* Animation 1: Live Ambient Background */
-            animation: gradientBG 15s cubic-bezier(0.4, 0, 0.6, 1) infinite; /* Adjusted timing function */
+            animation: gradientBG 15s cubic-bezier(0.4, 0, 0.6, 1) infinite; /* Adjusted timing function for smoothness */
             transform: translate3d(0, 0, 0); /* Force hardware acceleration */
             color:var(--muted);
             -webkit-font-smoothing:antialiased;
@@ -56,6 +56,30 @@
             box-shadow: 0 0 10px var(--accent);
         }
 
+        /* --- NEON RIPPLE / SPARKLE EFFECT (NEW) --- */
+        .sparkle-container {
+            position: absolute;
+            border-radius: 50%;
+            transform: scale(0);
+            animation: ripple 0.6s linear;
+            /* Use a radiant gradient to simulate neon glow */
+            background: radial-gradient(circle, rgba(61, 196, 255, 0.9) 0%, rgba(61, 196, 255, 0.4) 50%, transparent 100%);
+            pointer-events: none; /* Crucial to not interfere with clicks */
+            z-index: 10;
+        }
+
+        @keyframes ripple {
+            0% {
+                transform: scale(0);
+                opacity: 1;
+                box-shadow: 0 0 10px var(--accent);
+            }
+            100% {
+                transform: scale(4);
+                opacity: 0;
+            }
+        }
+        
         /* --- 3. LAYOUT & CARDS --- */
         .wrap{max-width:1200px;margin:48px auto;padding:0 24px;}
         .grid{display:grid;grid-template-columns:1fr 360px;gap:40px;margin-top:40px}
@@ -107,12 +131,12 @@
             box-shadow:0 0 15px 2px rgba(61, 196, 255, 0.3);
             object-fit: cover;
             /* Animation 2: Levitation/Float */
-            animation: float 5s ease-in-out infinite; /* Slightly faster */
+            animation: float 5s ease-in-out infinite; 
             transform: translate3d(0, 0, 0); /* Force hardware acceleration */
         }
         @keyframes float {
             0% { transform: translateY(0px) translate3d(0, 0, 0); }
-            50% { transform: translateY(-10px) translate3d(0, 0, 0); } /* Reduced amplitude */
+            50% { transform: translateY(-10px) translate3d(0, 0, 0); } 
             100% { transform: translateY(0px) translate3d(0, 0, 0); }
         }
         
@@ -151,7 +175,7 @@
         }
 
         /* Buttons */
-        .btn, .outline{
+        .btn, .outline, .ai-button{ /* Added .ai-button here for positioning */
             display:inline-flex;
             align-items:center;
             gap:6px;
@@ -161,6 +185,8 @@
             font-weight:700;
             transition: all 0.3s ease;
             font-size:15px;
+            position: relative; /* CRITICAL for ripple effect */
+            overflow: hidden; /* CRITICAL for ripple effect */
         }
         .btn{
             background:var(--accent);
@@ -307,6 +333,7 @@
         /* --- 12. AI FEATURE STYLES --- */
         .project-details { display: flex; flex-direction: column; min-height: 150px; position: relative; z-index: 2;}
         .ai-button {
+            /* Kept the button styling but added the critical position/overflow properties above */
             background: transparent;
             border: 1px solid var(--accent);
             color: var(--accent);
@@ -374,7 +401,7 @@
                         <a href="#contact">Contact</a>
                     </nav>
                 </div>
-                <div style="margin-top:16px;display:flex;gap:12px;align-items:center">
+                <div style="margin-top:16px;display:flex;gap:12px;align-items:center" id="button-group-hero">
                     <a class="btn" href="cv.pdf" download>
                         <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zM6 20V4h7v4h4v12H6zm2-8h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>
                         Download CV
@@ -601,6 +628,34 @@
             document.getElementById("progressBar").style.width = scrolled + "%";
         };
 
+        // --- NEON RIPPLE EFFECT LOGIC (NEW) ---
+        function createSparkle(event) {
+            const button = event.currentTarget;
+            
+            // 1. Calculate the position of the click relative to the button
+            const rect = button.getBoundingClientRect();
+            const size = Math.max(rect.width, rect.height);
+            const x = event.clientX - rect.left;
+            const y = event.clientY - rect.top;
+
+            // 2. Create the ripple element
+            const sparkle = document.createElement('span');
+            sparkle.classList.add('sparkle-container');
+
+            // 3. Position and size the element
+            sparkle.style.width = sparkle.style.height = `${size}px`;
+            sparkle.style.left = `${x - size / 2}px`;
+            sparkle.style.top = `${y - size / 2}px`;
+
+            // 4. Append it to the button
+            button.appendChild(sparkle);
+
+            // 5. Clean up after the animation finishes (0.6s)
+            setTimeout(() => {
+                sparkle.remove();
+            }, 600);
+        }
+
         // --- DOM LOAD ---
         document.addEventListener('DOMContentLoaded', () => {
             // Smooth Scroll
@@ -630,9 +685,20 @@
             }, { threshold: 0.15, rootMargin: '0px 0px -50px 0px' });
             document.querySelectorAll('.fade-in').forEach(el => obs.observe(el));
 
-            // AI Buttons
+            // AI Buttons and Ripple/Sparkle Initialization
+            const sparkleTargets = document.querySelectorAll('.btn, .outline, .ai-button');
+            
+            sparkleTargets.forEach(el => {
+                // Attach the new ripple effect listener
+                el.addEventListener('click', createSparkle);
+            });
+
+
             document.querySelectorAll('.ai-button').forEach(btn => {
-                btn.addEventListener('click', function() {
+                btn.addEventListener('click', function(e) {
+                    // Prevent sparkle effect from applying twice if already handled by the general listener
+                    e.stopPropagation(); 
+                    
                     const pid = this.dataset.id;
                     const proj = document.querySelector(`.project[data-id="${pid}"]`);
                     generateProjectInsight(pid, proj.querySelector('h3').textContent, proj.querySelector('.project-description').textContent);
