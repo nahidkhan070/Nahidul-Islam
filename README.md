@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8" />
@@ -113,31 +114,50 @@
 
     <section>
         <h2>About Me</h2>
-        <p>I am Nahidul Islam, currently working as an Executive MIS at Labib Dyeing Mills Ltd. I specialize in MIS reporting, data analysis, process improvement, and digital reporting solutions. I enjoy creating efficient systems that improve business decision-making.</p>
+        <p>I am Nahidul Islam, a dedicated MIS Executive with strong expertise in data analysis, reporting, and business process optimization. I specialize in using Excel, SQL, Power BI, and ERP/CRM systems to convert raw data into meaningful insights that support strategic decision-making. I have a proven record of developing automated dashboards, MIS systems, and performance reports for senior management.</p>
         <a class="cv-btn" href="cv.pdf" download>Download CV</a>
     </section>
 
     <section>
         <h2>Experience</h2>
-        <p><strong>Executive MIS</strong> — Labib Dyeing Mills Ltd<br>
-        <em>May 15, 2023 – Present</em></p>
+
+        <p><strong>MIS Executive</strong> — Labib Dyeing Mills Ltd<br>
+        <em>2023 – Present</em></p>
         <ul>
-            <li>Designing and preparing MIS dashboards & automated reports.</li>
-            <li>Data validation and inter-department coordination.</li>
-            <li>Process improvement and data flow optimization.</li>
-            <li>Supporting management with data insights.</li>
+            <li>Analyze complex datasets to generate actionable insights for management.</li>
+            <li>Create and maintain MIS dashboards and automated reporting systems.</li>
+            <li>Develop Power BI dashboards for real-time production, sales, and efficiency tracking.</li>
+            <li>Coordinate with departments to ensure data accuracy and improve workflow efficiency.</li>
+            <li>Prepare presentations and reports for senior management.</li>
+        </ul>
+
+        <p><strong>Tele Sales Executive</strong> — bdCalling IT Ltd<br>
+        <em>2022 – 2023</em></p>
+        <ul>
+            <li>Generated leads and closed sales through strong communication and negotiation.</li>
+            <li>Provided tailored solutions to meet client needs and maintain high satisfaction.</li>
+            <li>Achieved sales targets consistently.</li>
+        </ul>
+
+        <p><strong>Computer Operator</strong> — Goldenline Medical Center<br>
+        <em>2020 – 2021</em></p>
+        <ul>
+            <li>Managed health information systems and ensured accurate data entry.</li>
+            <li>Handled scheduling, patient billing, and reporting systems.</li>
+            <li>Collaborated with healthcare professionals to support patient care workflows.</li>
         </ul>
     </section>
 
     <section>
         <h2>Skills</h2>
         <div class="skills">
-            <span>MS Excel</span>
-            <span>Power BI</span>
-            <span>Data Analysis</span>
-            <span>Google Sheets</span>
-            <span>MIS Reporting</span>
-            <span>SQL</span>
+            <span>Management Skills</span>
+            <span>Creativity</span>
+            <span>CRM Software</span>
+            <span>Microsoft Office</span>
+            <span>Communication & Negotiation</span>
+            <span>Project Management</span>
+            <span>SQL & ERP</span>
         </div>
     </section>
 
@@ -161,9 +181,9 @@
 
     <section>
         <h2>Contact</h2>
-        <p>Email: your-email@example.com</p>
-        <p>Phone: 01XXXXXXXXX</p>
-        <p>Location: Bangladesh</p>
+        <p>Email: meghnahid@gmail.com</p>
+        <p>Phone: 01609597666</p>
+        <p>Address: Abdullahpur, Dhaka</p>
     </section>
 
     <footer>
