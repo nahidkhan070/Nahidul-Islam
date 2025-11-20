@@ -105,7 +105,7 @@
 </head>
 <body>
     <header>
-        <img src="me.jpeg" ... />
+        <img src="me.jpg" ... />
         <h1>Nahidul Islam</h1>
         <p>Executive MIS | Labib Dyeing Mills Ltd (Labib Group)</p>
         <p>Since May 15, 2023</p>
