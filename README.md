@@ -108,6 +108,13 @@
         <div style="margin-top:12px;display:flex;gap:10px;align-items:center">
           <a class="btn" href="cv.pdf" download>Download CV</a>
           <a class="outline" href="mailto:meghnahid@gmail.com">Email</a>
+          <div class="card fade-in">
+  <h2>Contact</h2>
+  <div class="meta">
+    <div><b>GitHub</b><div><a href="[https://github.com/nahidkhan070/nahidulislam.github.io]" style="color:var(--accent);text-decoration:none;" target="_blank">NahidulIslam</a></div></div>
+    <div><b>LinkedIn</b><div><a href="[https://www.linkedin.com/in/nahidkhan0070]" style="color:var(--accent);text-decoration:none;" target="_blank">Nahidul Islam</a></div></div>
+  </div>
+</div>
         </div>
       </div>
     </header>
