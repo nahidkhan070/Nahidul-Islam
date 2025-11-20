@@ -29,7 +29,8 @@
             background: var(--bg-gradient);
             background-size: 400% 400%;
             /* Animation 1: Live Ambient Background */
-            animation: gradientBG 15s ease infinite;
+            animation: gradientBG 15s cubic-bezier(0.4, 0, 0.6, 1) infinite; /* Adjusted timing function */
+            transform: translate3d(0, 0, 0); /* Force hardware acceleration */
             color:var(--muted);
             -webkit-font-smoothing:antialiased;
             min-height:100vh;
@@ -106,12 +107,13 @@
             box-shadow:0 0 15px 2px rgba(61, 196, 255, 0.3);
             object-fit: cover;
             /* Animation 2: Levitation/Float */
-            animation: float 6s ease-in-out infinite;
+            animation: float 5s ease-in-out infinite; /* Slightly faster */
+            transform: translate3d(0, 0, 0); /* Force hardware acceleration */
         }
         @keyframes float {
-            0% { transform: translateY(0px); }
-            50% { transform: translateY(-12px); }
-            100% { transform: translateY(0px); }
+            0% { transform: translateY(0px) translate3d(0, 0, 0); }
+            50% { transform: translateY(-10px) translate3d(0, 0, 0); } /* Reduced amplitude */
+            100% { transform: translateY(0px) translate3d(0, 0, 0); }
         }
         
         .hero h1{margin:0;font-size:38px;color:#fff;font-weight:900;}
