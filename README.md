@@ -307,18 +307,52 @@
         .meta a {color: var(--accent); text-decoration: none; transition: color 0.2s; display: flex; align-items: center; gap: 6px;}
         .meta a:hover {color: #fff; text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);}
 
-        /* --- 10. RESPONSIVE --- */
+        /* --- 10. RESPONSIVE (UPDATED FOR FULL FLUIDITY) --- */
+        /* Tablet/Desktop adjustments */
+        @media(max-width:1080px){ 
+            .wrap{max-width:1000px; margin: 48px auto 60px; padding: 0 30px;}
+        }
         @media(max-width:980px){
+            /* Switch main layout to single column */
             .grid{grid-template-columns:1fr; gap: 30px;}
+            /* Keep hero side-by-side on tablet/smaller desktop */
             .hero{grid-template-columns:120px 1fr; gap: 24px;}
+            /* Switch projects to single column */
             .projects-container{grid-template-columns:1fr}
         }
+        /* Mobile phone (below 520px) */
         @media(max-width:520px){
             .wrap{margin:24px 16px;}
-            .hero{grid-template-columns:100px 1fr;padding:20px;}
-            .avatar{width:90px;height:90px;}
+            /* Stack avatar and text vertically */
+            .hero{grid-template-columns:1fr; padding:20px; text-align: center;} 
+            .avatar{width:100px;height:100px; margin-bottom: 12px;} /* Centered avatar */
             .nav{display:none}
             .hero h1{font-size: 28px;}
+            
+            /* Center text block contents */
+            .hero > div > div:first-child { 
+                display: block; 
+                text-align: center;
+            }
+            .hero .job-title, .hero .job-dates { 
+                text-align: center; 
+            }
+            
+            /* Stack buttons vertically and stretch to full width */
+            #button-group-hero{
+                flex-direction: column;
+                gap: 10px !important;
+                align-items: stretch !important;
+            }
+            .btn, .outline, .ai-button {
+                justify-content: center; /* Center button text */
+                padding: 12px 20px;
+            }
+        }
+        /* Extra small mobile (below 400px) */
+        @media(max-width:400px){
+             .wrap{margin:20px 10px;}
+             .hero h1{font-size: 26px;}
         }
 
         /* --- 11. ENTRANCE ANIMATIONS --- */
