@@ -109,7 +109,6 @@
           <a class="btn" href="cv.pdf" download>Download CV</a>
           <a class="outline" href="mailto:meghnahid@gmail.com">Email</a>
           <div class="card fade-in">
-  <h2>Contact</h2>
 </div>
         </div>
       </div>
