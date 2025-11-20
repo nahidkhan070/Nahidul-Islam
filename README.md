@@ -10,12 +10,15 @@
     <style>
         /* --- 1. PREMIUM COLOR PALETTE & VARIABLES --- */
         :root{
-            /* Updated for Animated Background */
-            --bg-gradient: linear-gradient(125deg, #09090b 0%, #1a1a2e 50%, #0f172a 100%); 
+            /* UPDATED FOR NEON OCEAN/SEA GREEN RADIANT BACKGROUND */
+            /* New base background is a deep ocean teal that animates */
+            --bg-gradient: linear-gradient(125deg, #002120 0%, #013330 50%, #002120 100%); 
             --card-bg: rgba(255,255,255,0.03);
             --glass-border: rgba(255,255,255,0.08);
-            --accent: #3dc4ff; 
-            --accent-rgb: 61, 196, 255;
+            
+            /* The accent color is shifted to a vibrant, electric sea green/cyan */
+            --accent: #00FFFF; /* Electric Cyan */
+            --accent-rgb: 0, 255, 255; 
             --muted: rgba(255,255,255,0.8);
             --header-font: 'Playfair Display', serif;
             --body-font: 'Poppins', system-ui, Arial;
@@ -26,21 +29,24 @@
         body{
             margin:0;
             font-family:var(--body-font);
+            
+            /* Apply the new vibrant gradient and animation */
             background: var(--bg-gradient);
             background-size: 400% 400%;
-            /* Animation 1: Live Ambient Background */
-            animation: gradientBG 15s cubic-bezier(0.4, 0, 0.6, 1) infinite; /* Adjusted timing function for smoothness */
-            transform: translate3d(0, 0, 0); /* Force hardware acceleration */
+            animation: gradientBG 20s cubic-bezier(0.4, 0, 0.6, 1) infinite; 
+            transform: translate3d(0, 0, 0); 
+            
             color:var(--muted);
             -webkit-font-smoothing:antialiased;
             min-height:100vh;
             line-height:1.6;
         }
 
+        /* Keyframes adjusted to use the new neon ocean colors */
         @keyframes gradientBG {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+            0% { background-position: 0% 50%; background-color: #002120; } /* Dark Teal Base */
+            50% { background-position: 100% 50%; background-color: #00FFC0; } /* Neon Sea Green */
+            100% { background-position: 0% 50%; background-color: #002120; } /* Dark Teal Base */
         }
 
         /* Animation 5: Scroll Progress Bar */
@@ -53,18 +59,19 @@
             width: 0%;
             z-index: 1000;
             transition: width 0.1s;
-            box-shadow: 0 0 10px var(--accent);
+            /* Stronger neon shadow */
+            box-shadow: 0 0 15px var(--accent);
         }
 
-        /* --- NEON RIPPLE / SPARKLE EFFECT (NEW) --- */
+        /* --- NEON RIPPLE / SPARKLE EFFECT (UPDATED) --- */
         .sparkle-container {
             position: absolute;
             border-radius: 50%;
             transform: scale(0);
             animation: ripple 0.6s linear;
-            /* Use a radiant gradient to simulate neon glow */
-            background: radial-gradient(circle, rgba(61, 196, 255, 0.9) 0%, rgba(61, 196, 255, 0.4) 50%, transparent 100%);
-            pointer-events: none; /* Crucial to not interfere with clicks */
+            /* Use the new electric sea green accent color */
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.9) 0%, rgba(0, 255, 255, 0.4) 50%, transparent 100%);
+            pointer-events: none; 
             z-index: 10;
         }
 
@@ -72,7 +79,7 @@
             0% {
                 transform: scale(0);
                 opacity: 1;
-                box-shadow: 0 0 10px var(--accent);
+                box-shadow: 0 0 15px var(--accent); /* Increased shadow for intensity */
             }
             100% {
                 transform: scale(4);
@@ -99,6 +106,7 @@
             color:#fff;
             margin:0 0 16px 0;
             line-height:1.2;
+            text-shadow: 0 0 5px rgba(0, 255, 255, 0.5); /* Subtle neon glow for headers */
         }
         h1{font-size:32px;}
         h2{font-size:24px; margin-bottom: 12px;}
@@ -107,7 +115,7 @@
         ul{padding-left:18px; margin-top: 4px; margin-bottom: 4px; font-size: 15px;}
         li {margin-bottom: 4px;}
 
-        /* --- 5. HERO SECTION & FLOATING AVATAR --- */
+        /* --- 5. HERO SECTION & FLOATING AVATAR (UPDATED GLOW) --- */
         .hero{
             display:grid;
             grid-template-columns:160px 1fr;
@@ -128,11 +136,11 @@
             display:block;
             margin:auto;
             border:4px solid var(--accent);
-            box-shadow:0 0 15px 2px rgba(61, 196, 255, 0.3);
+            /* Avatar neon glow */
+            box-shadow:0 0 20px 3px rgba(0, 255, 255, 0.5); 
             object-fit: cover;
-            /* Animation 2: Levitation/Float */
             animation: float 5s ease-in-out infinite; 
-            transform: translate3d(0, 0, 0); /* Force hardware acceleration */
+            transform: translate3d(0, 0, 0); 
         }
         @keyframes float {
             0% { transform: translateY(0px) translate3d(0, 0, 0); }
@@ -144,17 +152,16 @@
         .hero .job-title{margin:4px 0 0;font-weight:600;font-size:18px;color:var(--accent);}
         .hero .job-dates{margin:4px 0 0;font-size:14px;opacity:0.6;}
 
-        /* --- 6. NAVIGATION WITH ELEGANT UNDERLINE --- */
+        /* --- 6. NAVIGATION WITH ELEGANT UNDERLINE (UPDATED GLOW) --- */
         .nav{display:flex;gap:12px;justify-self:end}
         .nav a{
             color:var(--accent);
             text-decoration:none;
             padding:8px 12px;
             font-weight:600;
-            position: relative; /* Needed for underline */
+            position: relative; 
             transition: color 0.3s ease;
         }
-        /* Animation 6: Center-out Underline */
         .nav a::after {
             content: '';
             position: absolute;
@@ -164,6 +171,7 @@
             left: 50%;
             background-color: var(--accent);
             transition: width 0.3s ease, left 0.3s ease;
+            box-shadow: 0 0 5px var(--accent);
         }
         .nav a:hover::after {
             width: 80%;
@@ -171,11 +179,11 @@
         }
         .nav a:hover {
             color: #fff;
-            text-shadow: 0 0 10px rgba(61, 196, 255, 0.5);
+            text-shadow: 0 0 12px rgba(0, 255, 255, 0.8);
         }
 
-        /* Buttons */
-        .btn, .outline, .ai-button{ /* Added .ai-button here for positioning */
+        /* Buttons (UPDATED GLOW) */
+        .btn, .outline, .ai-button{ 
             display:inline-flex;
             align-items:center;
             gap:6px;
@@ -185,16 +193,16 @@
             font-weight:700;
             transition: all 0.3s ease;
             font-size:15px;
-            position: relative; /* CRITICAL for ripple effect */
-            overflow: hidden; /* CRITICAL for ripple effect */
+            position: relative; 
+            overflow: hidden; 
         }
         .btn{
             background:var(--accent);
-            color:#09090b;
+            color:#002120; /* Darker text for contrast */
         }
         .btn:hover{
             transform:translateY(-3px);
-            box-shadow:0 10px 25px rgba(61, 196, 255, 0.5);
+            box-shadow:0 0 30px rgba(0, 255, 255, 0.8); /* Intense glow on hover */
         }
         .outline{
             background:transparent;
@@ -204,7 +212,7 @@
         .outline:hover{
             border-color:var(--accent);
             color:var(--accent);
-            box-shadow:0 0 15px rgba(61, 196, 255, 0.2);
+            box-shadow:0 0 20px rgba(0, 255, 255, 0.4); /* Subtle outline glow */
             transform: translateY(-2px);
         }
         .icon {
@@ -213,33 +221,32 @@
             fill: currentColor;
             flex-shrink: 0;
         }
-        .btn .icon { fill: #09090b; }
+        .btn .icon { fill: #002120; }
 
-        /* --- 7. STAGGERED SKILLS --- */
+        /* --- 7. STAGGERED SKILLS (UPDATED GLOW) --- */
         .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:16px;}
         .chip{
-            background:rgba(61, 196, 255, 0.1);
+            background:rgba(0, 255, 255, 0.1);
             color:var(--accent);
             padding:8px 14px;
             border-radius:999px;
             font-weight:600;
             font-size:13px;
-            border: 1px solid rgba(61, 196, 255, 0.3);
-            transition: transform 0.2s, background 0.2s;
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            transition: transform 0.2s, background 0.2s, box-shadow 0.2s;
             
-            /* Initial state for staggered animation */
             opacity: 0;
             transform: translateY(10px);
         }
-        /* Animation 4: Pop in class (added via JS) */
         .chip.pop-in {
             opacity: 1;
             transform: translateY(0);
         }
         .chip:hover {
-            background: rgba(61, 196, 255, 0.2);
+            background: rgba(0, 255, 255, 0.2);
             transform: scale(1.05);
             cursor: default;
+            box-shadow: 0 0 10px rgba(0, 255, 255, 0.5); /* Chip hover glow */
         }
 
         /* --- 8. PROJECTS GRID & SHIMMER EFFECT --- */
@@ -251,9 +258,8 @@
             border:1px solid rgba(255,255,255,0.06);
             transition:transform .3s ease, box-shadow .3s ease;
             position: relative;
-            overflow: hidden; /* Important for shimmer */
+            overflow: hidden; 
         }
-        /* Animation 3: Shimmer Hover Effect */
         .project::before {
             content: '';
             position: absolute;
@@ -278,8 +284,8 @@
         .project:hover{
             transform:translateY(-7px);
             background:rgba(255,255,255,0.04);
-            box-shadow:0 20px 40px rgba(0,0,0,0.4);
-            border-color: rgba(61, 196, 255, 0.3);
+            box-shadow:0 0 35px rgba(0, 255, 255, 0.4); /* Intense project card glow on hover */
+            border-color: rgba(0, 255, 255, 0.5);
         }
         .project p {font-size: 14px;}
         .project-link {
@@ -299,7 +305,7 @@
         .meta b{color:#fff; display: flex; align-items: center; gap: 8px;}
         .meta > div {display: flex; gap: 10px; align-items: center; font-size: 15px;}
         .meta a {color: var(--accent); text-decoration: none; transition: color 0.2s; display: flex; align-items: center; gap: 6px;}
-        .meta a:hover {color: #fff;}
+        .meta a:hover {color: #fff; text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);}
 
         /* --- 10. RESPONSIVE --- */
         @media(max-width:980px){
@@ -330,10 +336,9 @@
             to{opacity:1;transform:none}
         }
 
-        /* --- 12. AI FEATURE STYLES --- */
+        /* --- 12. AI FEATURE STYLES (UPDATED GLOW) --- */
         .project-details { display: flex; flex-direction: column; min-height: 150px; position: relative; z-index: 2;}
         .ai-button {
-            /* Kept the button styling but added the critical position/overflow properties above */
             background: transparent;
             border: 1px solid var(--accent);
             color: var(--accent);
@@ -348,14 +353,14 @@
         }
         .ai-button:hover {
             background: var(--accent);
-            color: #09090b;
-            box-shadow: 0 0 15px rgba(61, 196, 255, 0.6);
+            color: #002120;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.8);
         }
         .insight-box {
             margin-top: 15px;
             padding: 15px;
             border-left: 4px solid var(--accent);
-            background: rgba(61, 196, 255, 0.05);
+            background: rgba(0, 255, 255, 0.05);
             border-radius: 4px;
             font-size: 14px;
             min-height: 40px;
@@ -385,7 +390,7 @@
 
     <div class="wrap">
         <header class="hero fade-in">
-            <img class="avatar" src="me.png" alt="Nahidul Islam" onerror="this.onerror=null; this.src='https://placehold.co/140x140/3dc4ff/09090b?text=NI'" />
+            <img class="avatar" src="me.png" alt="Nahidul Islam" onerror="this.onerror=null; this.src='https://placehold.co/140x140/00FFFF/002120?text=NI'" />
             <div>
                 <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
                     <div>
