@@ -356,7 +356,7 @@
 
     <div class="wrap">
         <header class="hero fade-in">
-            <img class="avatar" src="me.png" alt="Nahidul Islam" />
+            <img class="avatar" src="me.png" alt="Nahidul Islam" onerror="this.onerror=null; this.src='https://placehold.co/140x140/3dc4ff/09090b?text=NI'" />
             <div>
                 <div style="display:flex;align-items:center;justify-content:space-between;gap:12px">
                     <div>
@@ -368,6 +368,7 @@
                         <a href="#about">About</a>
                         <a href="#experience">Experience</a>
                         <a href="#projects">Projects</a>
+                        <a href="#training">Training</a> 
                         <a href="#contact">Contact</a>
                     </nav>
                 </div>
@@ -422,9 +423,9 @@
                         <h3 style="margin-bottom: 4px;">MIS Executive</h3>
                         <p style="margin:0;font-size:14px; opacity: 0.8;">Labib Dyeing Mills Ltd • <em>2023 – Present</em></p>
                         <ul>
-                            <li>Analyzed complex datasets to provide actionable insights for strategic decision-making.</li>
-                            <li>Utilized advanced Excel functions, SQL, and data visualization tools to enhance operational efficiency.</li>
-                            <li>Developed and maintained comprehensive MIS reports, dashboards, and presentations for senior management.</li>
+                            <li>Proficient in analyzing complex datasets to provide actionable insights that support strategic decision-making.</li>
+                            <li>Skilled in utilizing advanced Excel functions, SQL, and data visualization tools to enhance operational efficiency.</li>
+                            <li>Proven track record in developing and maintaining MIS reports, dashboards, and presentations for senior management.</li>
                         </ul>
                     </div>
 
@@ -433,27 +434,45 @@
                         <h3 style="margin-bottom: 4px;">Tele Sales Executive</h3>
                         <p style="margin:0;font-size:14px; opacity: 0.8;">bdCalling IT Ltd • <em>2022 – 2023</em></p>
                         <ul>
-                            <li>Drove sales growth by generating leads, qualifying prospects, and closing sales over the phone.</li>
-                            <li>Conducted needs assessments and provided tailored solutions to meet client requirements.</li>
-                            <li>Achieved and exceeded sales targets while maintaining high customer satisfaction levels.</li>
+                            <li>Driving sales growth through effective communication and relationship-building.</li>
+                            <li>Proven ability to generate leads, qualify prospects, and close sales over the phone.</li>
+                            <li>Expertise in conducting needs assessments and providing tailored solutions to meet client requirements.</li>
+                            <li>Strong track record of meeting and exceeding sales targets while maintaining high customer satisfaction levels.</li>
+                            <li>Excellent negotiation skills and a customer-centric approach to foster long-term client relationships.</li>
                         </ul>
                     </div>
                     
-                    <!-- Role 3: Computer Operator (Added from CV) -->
+                    <!-- Role 3: Computer Operator -->
                     <div style="margin-top:20px; border-left: 3px solid rgba(255,255,255,0.1); padding-left: 15px;">
                         <h3 style="margin-bottom: 4px;">Computer Operator</h3>
                         <p style="margin:0;font-size:14px; opacity: 0.8;">Goldenline Medical Center • <em>2020 – 2021</em></p>
                         <ul>
-                            <li>Managed health information systems, ensuring accurate data entry and integrity of patient records.</li>
-                            <li>Operated software for scheduling, billing, and reporting under strict confidentiality standards.</li>
-                            <li>Collaborated effectively with healthcare professionals to support patient care and administrative processes.</li>
+                            <li>Proficient in managing and maintaining health information systems, ensuring accurate data entry and integrity of patient records.</li>
+                            <li>Skilled in operating various software applications for scheduling, billing, and reporting, while adhering to strict confidentiality and compliance standards.</li>
+                            <li>Strong communication skills enable effective collaboration with healthcare professionals to support patient care and administrative processes.</li>
                         </ul>
                     </div>
                 </section>
 
+                <!-- Professional Training Section (Updated) -->
+                <section id="training" class="card fade-in delay-3" style="margin-top:30px">
+                    <h2>Professional Training</h2>
+                    
+                    <div style="margin-top:16px; border-left: 3px solid var(--accent); padding-left: 15px;">
+                        <h3 style="margin-bottom: 4px;">Python 101 for Data Science</h3>
+                        <p style="margin:0;font-size:14px; opacity: 0.8;">IBM Developer Skills Network • <em>Certified on 25 March 2021</em></p>
+                    </div>
+
+                    <div style="margin-top:20px; border-left: 3px solid var(--accent); padding-left: 15px;">
+                        <h3 style="margin-bottom: 4px;">Introduction to Python</h3>
+                        <p style="margin:0;font-size:14px; opacity: 0.8;">Analytics Vidhya • <em>Certified on 16 March 2021</em></p>
+                    </div>
+                </section>
+
+
                 
 
-<section id="projects" class="card fade-in delay-3" style="margin-top:30px">
+<section id="projects" class="card fade-in delay-4" style="margin-top:30px">
                     <h2>Key Projects & Automations</h2>
                     <p style="font-size: 14px; opacity: 0.8; margin-bottom: 20px;">
                         Click **"✨ Generate Impact Analysis"** for an AI summary.
