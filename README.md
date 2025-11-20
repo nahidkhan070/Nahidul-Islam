@@ -183,6 +183,15 @@
         }
 
         /* Buttons (UPDATED GLOW) */
+        .btn-group {
+            margin-top:16px;
+            display:flex;
+            gap:12px;
+            /* Allow buttons to wrap to the next line if the screen is too small */
+            flex-wrap: wrap; 
+            align-items:center;
+            width: 100%; /* Ensure it takes full width of the hero content area */
+        }
         .btn, .outline, .ai-button{ 
             display:inline-flex;
             align-items:center;
@@ -195,6 +204,11 @@
             font-size:15px;
             position: relative; 
             overflow: hidden; 
+            /* Flex properties for wrapping/responsiveness */
+            flex-grow: 1; /* Allow stretching in responsive mode */
+            flex-shrink: 0; /* Prevent shrinking below content size */
+            white-space: nowrap; /* Keep text on one line */
+            max-width: fit-content; /* Reset max width for flex */
         }
         .btn{
             background:var(--accent);
@@ -338,15 +352,17 @@
                 text-align: center; 
             }
             
-            /* Stack buttons vertically and stretch to full width */
-            #button-group-hero{
-                flex-direction: column;
-                gap: 10px !important;
-                align-items: stretch !important;
+            /* --- ACTION BUTTONS: Stack vertically and stretch to full width --- */
+            .btn-group{
+                flex-direction: column; /* Stack vertically */
+                gap: 10px; /* Reduce gap slightly when stacked */
+                align-items: stretch; /* Stretch all buttons to fill container width */
             }
             .btn, .outline, .ai-button {
                 justify-content: center; /* Center button text */
                 padding: 12px 20px;
+                width: 100%; /* Ensure full width when stacked */
+                max-width: 100%; /* Override max-width when stacked */
             }
         }
         /* Extra small mobile (below 400px) */
@@ -440,7 +456,8 @@
                         <a href="#contact">Contact</a>
                     </nav>
                 </div>
-                <div style="margin-top:16px;display:flex;gap:12px;align-items:center" id="button-group-hero">
+                <!-- Action Button Group (Renamed and Styled with Flexbox Class) -->
+                <div class="btn-group" id="button-group-hero">
                     <a class="btn" href="cv.pdf" download>
                         <svg class="icon" viewBox="0 0 24 24"><path d="M14 2H6a2 2 0 00-2 2v16a2 2 0 002 2h12a2 2 0 002-2V8l-6-6zM6 20V4h7v4h4v12H6zm2-8h8v2H8v-2zm0 4h8v2H8v-2z"/></svg>
                         Download CV
