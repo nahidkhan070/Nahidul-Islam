@@ -110,10 +110,6 @@
           <a class="outline" href="mailto:meghnahid@gmail.com">Email</a>
           <div class="card fade-in">
   <h2>Contact</h2>
-  <div class="meta">
-    <div><b>GitHub</b><div><a href="[https://github.com/nahidkhan070/nahidulislam.github.io]" style="color:var(--accent);text-decoration:none;" target="_blank">NahidulIslam</a></div></div>
-    <div><b>LinkedIn</b><div><a href="[https://www.linkedin.com/in/nahidkhan0070]" style="color:var(--accent);text-decoration:none;" target="_blank">Nahidul Islam</a></div></div>
-  </div>
 </div>
         </div>
       </div>
@@ -198,13 +194,23 @@
       <!-- right column -->
       <aside class="side">
         <div class="card fade-in">
-          <h2>Contact</h2>
-          <div class="meta">
-            <div><b>Email</b><div>meghnahid@gmail.com</div></div>
-            <div><b>Phone</b><div>01609597666</div></div>
-            <div><b>Location</b><div>Abdullahpur, Dhaka</div></div>
-          </div>
-        </div>
+  <h2>Contact</h2>
+  <div class="meta">
+    <div><b>Email</b><div>meghnahid@gmail.com</div></div>
+    <div><b>Phone</b><div>01609597666</div></div>
+    <div><b>Location</b><div>Abdullahpur, Dhaka</div></div>
+    
+    <div>
+        <b>GitHub</b>
+        <div><a href="https://github.com/nahidkhan070/" style="color:var(--accent);text-decoration:none;" target="_blank">nahidkhan070</a></div>
+    </div>
+    
+    <div>
+        <b>LinkedIn</b>
+        <div><a href="https://www.linkedin.com/in/nahidkhan0070" style="color:var(--accent);text-decoration:none;" target="_blank">Nahidul Islam</a></div>
+    </div>
+  </div>
+</div>
 
         <div class="card fade-in" style="margin-top:18px">
           <h2>Education</h2>
